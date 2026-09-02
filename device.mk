@@ -7,6 +7,9 @@
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
 
+# Camera extension for torch slider
+$(call soong_config_set,libcameraservice,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.bangkk)
+
 # Screen
 TARGET_SCREEN_DENSITY := 280
 
