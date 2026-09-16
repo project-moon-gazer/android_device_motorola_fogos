@@ -30,7 +30,7 @@ replace_repo() {
 }
 
 # Git clones
-clone_if_missing "git@github.com:project-moon-gazer/android_device_motorola_sm6375-common.git" "cnb" "device/motorola/sm6375-common"
+clone_if_missing "git@github.com:project-moon-gazer/android_device_motorola_sm6375-common.git" "bliss" "device/motorola/sm6375-common"
 clone_if_missing "git@github.com:project-moon-gazer/proprietary_vendor_motorola_fogos.git" "cnb" "vendor/motorola/fogos"
 clone_if_missing "git@github.com:project-moon-gazer/proprietary_vendor_motorola_sm6375-common.git" "cnb" "vendor/motorola/sm6375-common"
 clone_if_missing "git@github.com:project-moon-gazer/android_kernel_motorola_sm6375.git" "Benihime" "kernel/motorola/sm6375"

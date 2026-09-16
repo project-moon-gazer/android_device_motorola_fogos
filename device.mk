@@ -27,10 +27,12 @@ $(call inherit-product, vendor/lunaris/dolby/dolby.mk)
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
+    SettingsRes \
     FrameworksResDeviceXT2363-8 \
     FrameworksResDeviceXT2363-9 \
     LineageApertureAppDevice \
     ProductFrameworksResDevice \
+    SettingsRes \
     SystemUIResDevice \
     WifiResDevice \
     WifiResDeviceXT2363-8 \
