@@ -11,6 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fogos device
 $(call inherit-product, device/motorola/fogos/device.mk)
 
+# Revanced
+$(call inherit-product, vendor/revanced/products/revanced.mk)
+
 # Inherit some common Lineage stuff.
 UWU_DEVICE_TYPE := phone
 UWU_SUPPORTS_TELEPHONY := true
@@ -34,3 +37,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DeviceProduct=fogos_g
 
 PRODUCT_ENABLE_UFFD_GC := true
+
+WITH_REVANCED := true

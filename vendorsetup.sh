@@ -39,6 +39,7 @@ clone_if_missing "https://github.com/LineageOS/android_hardware_motorola.git" "l
 clone_if_missing "https://github.com/LineageOS/android_hardware_samsung_slsi_nfc.git" "" "hardware/samsung_slsi/nfc"
 clone_if_missing "git@github.com:missrais/vendor_lunaris_dolby.git" "cnb" "vendor/lunaris/dolby"
 clone_if_missing "git@github.com:missrais/keys.git" "main" "vendor/priv-keys/keys"
+clone_if_missing "git@github.com:project-moon-gazer/vendor_revanced.git" "sixteen-qpr2" "vendor/revanced"
 
 # Replace upstream LineageOS FM radio repo with my fork's fix (cnb branch)
 replace_repo "https://github.com/missrais/android_vendor_qcom_opensource_fm-commonsys.git" "cnb" "vendor/qcom/opensource/commonsys/fm"
