@@ -35,7 +35,7 @@ clone_if_missing "https://github.com/project-moon-gazer/proprietary_vendor_motor
 clone_if_missing "https://github.com/project-moon-gazer/proprietary_vendor_motorola_sm6375-common.git" "cnb" "vendor/motorola/sm6375-common"
 clone_if_missing "https://github.com/project-moon-gazer/android_kernel_motorola_sm6375.git" "Benihime" "kernel/motorola/sm6375"
 # Additional repos
-clone_if_missing "https://github.com/LineageOS/android_hardware_motorola.git" "lineage-23.2" "hardware/motorola"
+clone_if_missing "https://github.com/project-moon-gazer/android_hardware_motorola.git" "lineage-23.2" "hardware/motorola"
 clone_if_missing "https://github.com/LineageOS/android_hardware_samsung_slsi_nfc.git" "" "hardware/samsung_slsi/nfc"
 
 # Replace upstream LineageOS FM radio repo with my fork's fix (cnb branch)
