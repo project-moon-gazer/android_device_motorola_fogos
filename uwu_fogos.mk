@@ -12,12 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/fogos/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+UWU_DEVICE_TYPE := phone
+UWU_SUPPORTS_TELEPHONY := true
+UWU_MAINTAINER := Rem
+$(call inherit-product, vendor/uwu/config/common.mk)
 
 # Signing keys
 $(call inherit-product, vendor/priv-keys/keys/keys.mk)
 
-PRODUCT_NAME := lineage_fogos
+PRODUCT_NAME := uwu_fogos
 PRODUCT_DEVICE := fogos
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
