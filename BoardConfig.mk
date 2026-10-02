@@ -53,5 +53,6 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := 34
 # inherit from the proprietary version
 include vendor/motorola/fogos/BoardConfigVendor.mk
 
-# Dolby
-include vendor/lunaris/dolby/BoardConfigDolby.mk
+# DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/motorola/fogos/framework_compatibility_matrix.xml
