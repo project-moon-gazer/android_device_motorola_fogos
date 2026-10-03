@@ -55,3 +55,6 @@ include vendor/motorola/fogos/BoardConfigVendor.mk
 
 # Dolby
 include vendor/lunaris/dolby/BoardConfigDolby.mk
+ 
+# gapps 
+-include vendor/gapps/arm64/BoardConfigVendor.mk

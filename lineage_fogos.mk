@@ -14,6 +14,12 @@ $(call inherit-product, device/motorola/fogos/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# gapps
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+
+# Revanced
+$(call inherit-product, vendor/revanced/products/revanced.mk)
+
 # Signing keys
 $(call inherit-product, vendor/priv-keys/keys/keys.mk)
 
@@ -29,3 +35,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="fogos_g-user 15 V1UGS35H.75-14-3-10 6668a-36fa40 release-keys MV-186" \
     BuildFingerprint=motorola/fogos_g/fogos:15/V1UGS35H.75-14-3-10/6668a-36fa40:user/release-keys \
     DeviceProduct=fogos_g
+
+WITH_REVANCED := true
