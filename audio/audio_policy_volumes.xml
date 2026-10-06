@@ -13,7 +13,7 @@ volume index from 0 to 100.
     <volume stream="AUDIO_STREAM_VOICE_CALL" deviceCategory="DEVICE_CATEGORY_SPEAKER"
                                              ref="DEFAULT_VOICE_VOLUME_CURVE"/>
     <volume stream="AUDIO_STREAM_VOICE_CALL" deviceCategory="DEVICE_CATEGORY_EARPIECE">
-        <point>0,-2500</point>
+	    <point>0,-2500</point>
         <point>44,-1400</point>
         <point>71,-700</point>
         <point>100,0</point>
