@@ -3459,7 +3459,7 @@
     </path>
 
     <path name="speaker-safe">
-        <path name="speaker-mono" />
+        <path name="speaker" />
     </path>
 
     <path name="bt-a2dp">
@@ -3648,7 +3648,7 @@
         <ctl name="RX INT2_1 MIX1 INP0" value="RX1" />
         <ctl name="AUX_RDAC Switch" value="1"/>
         <ctl name="RX HPH Mode" value="CLS_AB" />
-        <ctl name="FSM_Scene" value="14"/>
+        <ctl name="FSM_Scene" value="0"/>
         <ctl name="FSM_Amp_Switch" value="1"/>
         <ctl name="RX_COMP1 Switch" value="1" />
         <ctl name="HPHL_COMP Switch" value="1" />
@@ -3730,7 +3730,7 @@
         <ctl name="RX INT2_1 MIX1 INP0" value="RX1" />
         <ctl name="AUX_RDAC Switch" value="1"/>
         <ctl name="RX HPH Mode" value="CLS_AB" />
-        <ctl name="FSM_Scene" value="14"/>
+        <ctl name="FSM_Scene" value="0"/>
         <ctl name="FSM_Amp_Switch" value="1"/>
         <ctl name="RX INT1_1 MIX1 INP0" value="RX1" />
         <ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
