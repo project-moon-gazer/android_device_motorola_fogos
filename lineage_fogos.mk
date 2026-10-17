@@ -14,6 +14,9 @@ $(call inherit-product, device/motorola/fogos/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Revanced
+$(call inherit-product, vendor/revanced/products/revanced.mk)
+
 PRODUCT_NAME := lineage_fogos
 PRODUCT_DEVICE := fogos
 PRODUCT_MANUFACTURER := motorola
@@ -29,4 +32,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # PRODUCT ENABLE_UFFD GC
 PRODUCT_ENABLE_UFFD_GC := true
-
