@@ -12,12 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/motorola/fogos/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/edith/config/common.mk)
 
 # Revanced
 $(call inherit-product, vendor/revanced/products/revanced.mk)
 
-PRODUCT_NAME := lineage_fogos
+PRODUCT_NAME := edith_fogos
 PRODUCT_DEVICE := fogos
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := motorola
@@ -29,6 +29,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="fogos_g-user 15 V1UGS35H.75-14-3-10 6668a-36fa40 release-keys MV-186" \
     BuildFingerprint=motorola/fogos_g/fogos:15/V1UGS35H.75-14-3-10/6668a-36fa40:user/release-keys \
     DeviceProduct=fogos_g
+
+# GMS
+WITH_GMS = true
+
+$(call inherit-product, vendor/priv-keys/keys/keys.mk)
 
 # PRODUCT ENABLE_UFFD GC
 PRODUCT_ENABLE_UFFD_GC := true
