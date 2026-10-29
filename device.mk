@@ -25,7 +25,7 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Dolby
-$(call inherit-product, vendor/lunaris/dolby/dolby.mk)
+$(call inherit-product, vendor/motorola/dolby/dolby.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
