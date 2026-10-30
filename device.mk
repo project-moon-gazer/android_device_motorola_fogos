@@ -27,6 +27,9 @@ $(call inherit-product, device/motorola/sm6375-common/common.mk)
 # Dolby
 $(call inherit-product, vendor/motorola/dolby/dolby.mk)
 
+# Camera
+$(call inherit-product, vendor/motorola/camera/camera.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
