@@ -19,6 +19,17 @@ PRODUCT_AAPT_PREF_CONFIG := 280dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 PRODUCT_SHIPPING_API_LEVEL := 33
 
+# Motorola Framework
+$(call inherit-product, $(LOCAL_PATH)/moto-framework/moto-framework.mk)
+
+PRODUCT_PACKAGES += tinymix
+# FM
+TARGET_HAS_FM := true
+
+PRODUCT_PACKAGES += \
+    FM2
+
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml
