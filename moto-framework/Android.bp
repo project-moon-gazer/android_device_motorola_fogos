@@ -1,0 +1,62 @@
+//
+// Copyright (C) 2024 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+dex_import {
+    name: "com.motorola.frameworks.core.addon",
+    owner: "motorola",
+    jars: [
+        "framework/com.motorola.frameworks.core.addon.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "moto-core_services",
+    owner: "motorola",
+    jars: [
+        "framework/moto-core_services.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "moto-settings",
+    owner: "motorola",
+    jars: [
+        "framework/moto-settings.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "moto-checkin",
+    owner: "motorola",
+    jars: [
+        "framework/moto-checkin.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "motoaudioeffectsdk",
+    owner: "motorola",
+    jars: [
+        "framework/motoaudioeffectsdk.jar",
+    ],
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "MotorolaSettingsProvider",
+    owner: "motorola",
+    apk: "priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
