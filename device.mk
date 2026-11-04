@@ -24,6 +24,9 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 # Inherit from motorola sm6375-common
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
+# Motorola Framework
+$(call inherit-product, $(LOCAL_PATH)/moto-framework/moto-framework.mk)
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResDevice \
