@@ -14,6 +14,31 @@ clone_if_missing() {
     fi
 }
 
+sync_repo() {
+    local repo_url=$1
+    local branch=$2
+    local target_dir=$3
+    if [ ! -d "$target_dir" ]; then
+        echo "Cloning $target_dir from $repo_url ($branch)..."
+        if [ -n "$branch" ]; then
+            git clone "$repo_url" -b "$branch" "$target_dir"
+        else
+            git clone "$repo_url" "$target_dir"
+        fi
+        echo "Done."
+    else
+        echo "Syncing $target_dir to latest ${branch:-HEAD}..."
+        (
+            cd "$target_dir" || exit
+            if [ -n "$branch" ]; then
+                git fetch "$repo_url" "$branch"
+                git reset --hard FETCH_HEAD
+            fi
+        )
+        echo "Done."
+    fi
+}
+
 # Removes an existing repo checkout (e.g. one brought in by repo sync/manifest)
 # and clones a replacement in its place.
 replace_repo() {
@@ -29,17 +54,25 @@ replace_repo() {
     echo "Done."
 }
 
+<<<<<<< HEAD
 # Git clones
 clone_if_missing "git@github.com:project-moon-gazer/android_device_motorola_sm6375-common.git" "cnb" "device/motorola/sm6375-common"
 clone_if_missing "git@github.com:project-moon-gazer/proprietary_vendor_motorola_fogos.git" "cnb" "vendor/motorola/fogos"
 clone_if_missing "git@github.com:project-moon-gazer/proprietary_vendor_motorola_sm6375-common.git" "cnb" "vendor/motorola/sm6375-common"
 clone_if_missing "git@github.com:project-moon-gazer/android_kernel_motorola_sm6375.git" "Benihime" "kernel/motorola/sm6375"
+=======
+# Git clones / syncs
+sync_repo "https://github.com/project-moon-gazer/android_device_motorola_sm6375-common.git" "vos" "device/motorola/sm6375-common"
+clone_if_missing "https://github.com/project-moon-gazer/proprietary_vendor_motorola_fogos.git" "cnb" "vendor/motorola/fogos"
+clone_if_missing "https://github.com/project-moon-gazer/proprietary_vendor_motorola_sm6375-common.git" "cnb" "vendor/motorola/sm6375-common"
+clone_if_missing "https://github.com/project-moon-gazer/android_kernel_motorola_sm6375.git" "Benihime" "kernel/motorola/sm6375"
+>>>>>>> d8158e0 (fogos: Auto-sync dependency repos in vendorsetup)
 # Additional repos
-clone_if_missing "https://github.com/project-moon-gazer/vendor_motorola_camera.git" "main" "vendor/motorola/camera"
+sync_repo "https://github.com/project-moon-gazer/vendor_motorola_camera.git" "main" "vendor/motorola/camera"
 if [ -d "vendor/motorola/camera" ]; then
     (cd vendor/motorola/camera && git lfs pull)
 fi
-clone_if_missing "https://github.com/project-moon-gazer/android_hardware_motorola.git" "lineage-23.2" "hardware/motorola"
+sync_repo "https://github.com/project-moon-gazer/android_hardware_motorola.git" "lineage-23.2" "hardware/motorola"
 clone_if_missing "https://github.com/LineageOS/android_hardware_samsung_slsi_nfc.git" "" "hardware/samsung_slsi/nfc"
 clone_if_missing "git@github.com:missrais/vendor_lunaris_dolby.git" "cnb" "vendor/lunaris/dolby"
 clone_if_missing "git@github.com:missrais/keys.git" "main" "vendor/priv-keys/keys"
