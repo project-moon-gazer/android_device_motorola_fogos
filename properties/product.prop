@@ -1,3 +1,7 @@
+# Camera specifications
+ro.camera.rear=50 MP + 2 MP
+ro.camera.front=16 MP
+
 # e-SIM
 masterclear.allow_retain_esim_profiles_after_fdr=true
 ro.telephony.esim_slot_id=1

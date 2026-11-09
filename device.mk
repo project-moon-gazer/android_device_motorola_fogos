@@ -1,7 +1,9 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Soong namespaces: keep board modules ahead of inherited common modules.
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    vendor/motorola/camera
 
 # Select the board power profile before the inherited common default.
 PRODUCT_COPY_FILES += \
@@ -22,6 +24,9 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 # Motorola Framework
 $(call inherit-product, $(LOCAL_PATH)/moto-framework/moto-framework.mk)
 
+# Motorola Camera
+$(call inherit-product-if-exists, vendor/motorola/camera/camera.mk)
+
 PRODUCT_PACKAGES += tinymix
 # FM
 TARGET_HAS_FM := true
@@ -39,6 +44,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayFogos \
     FrameworksResFogos \
     FrameworksResXT2363-8 \
+    LineageApertureAppFogos \
     NfcOverlayFogos \
     SettingsOverlayXT2363-1 \
     SettingsOverlayXT2363-2 \
