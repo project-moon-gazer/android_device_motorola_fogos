@@ -36,3 +36,5 @@ $(foreach sku,$(ODM_MANIFEST_SKUS), \
     $(eval ODM_MANIFEST_$(call to-upper,$(sku))_FILES := $(DEVICE_PATH)/sku/manifest_$(sku).xml))
 
 include vendor/motorola/fogos/BoardConfigVendor.mk
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
